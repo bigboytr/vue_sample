@@ -1,0 +1,39 @@
+@import "mixins";
+
+/* =================================================================================
+Header
+================================================================================= */
+$height: 50px;
+.header {
+  /* background: linear-gradient(#fff, #703081); */
+  //background: $layer0;
+  position: fixed;
+  width: 100%;
+  height: $height;
+  z-index: 20;
+  div[class^="col"] {
+    padding: 0;
+  }
+
+  .logo {
+    //color: $layer2;
+    height: $height;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .user-info {
+    .btn {
+      @include no-radius;
+      height: $height;
+      min-width: 55px;
+      //color: $layer2;
+    }
+
+    .btn-link:hover,
+    .btn-link:active,
+    .btn-link:focus {
+      text-decoration: none;
+    }
+  }
+}

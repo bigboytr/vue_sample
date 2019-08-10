@@ -1,0 +1,527 @@
+{
+  "appTitle": "Vue Sample",
+  "common": {
+    "logout": "Çıkış",
+    "label": {
+      "name": "Ad",
+      "surname": "Soyad",
+      "midname": "İkinci Ad",
+      "email": "Eposta",
+      "username": "Kullanıcı Adı",
+      "password": "Şifre",
+      "language": "Dil",
+      "success": "Başarılı",
+      "error": "Hatalı",
+      "warning": "Warning",
+      "oldPassword":"Eski Şifre",
+      "newPassword":"Yeni Şifre",
+      "newPasswordAgain":"Yeni Şifre(Tekrar)",
+      "filter":"Filtre",
+      "userInfo":"Kullanıcı Tanımlama",
+      "createUser":"Sistem kullanıcısı oluştur",
+      "emptyList":"Boş Liste",
+      "searchResult":"Arama Sonucu Bulunamadı",
+      "selectDefaultMessage": "--- Lütfen Seçiniz ---",
+      "nextStep": "Sonraki Adım",
+      "prevStep": "Önceki Adım",
+      "finishStep": "Kaydet"
+    },
+    "button": {
+      "save": "Kaydet",
+      "create": "Oluştur",
+      "cancel": "Kapat",
+      "login": "Giriş",
+      "deleteAll": "Hepsini Sil",
+      "deleteSelected": "Seçilenleri Sil",
+      "delete": "Sil",
+      "search": "Ara",
+      "advancedSearch": "Gelişmiş Arama",
+      "update": "Güncelle",
+      "upload": "Yükle",
+      "connect": "Bağla"
+    },
+    "statusCode": {
+      "200": "İşlem başarılı",
+      "400": "Kötü istek",
+      "401": "Yetkisiz işlem",
+      "403": "Giriş izni yok",
+      "409": "Email adresi daha önce kayıt edilmiş",
+      "417": "Veri bulunamadı",
+      "500": "Sunucu hatası"
+    },
+    "errorCode": {
+      "3060": "Kullanıcı adı veya şifre hatalı",
+      "3140": "Kullanıcı bulunamadı",
+      "4330": "Cihazdan okuma başarısız oldu",
+      "4360": "Cihaz aktif durum kontrolü sırasında hata oluştu",
+      "4400": "Mesaj sayısı alınırken hata oluştu"
+    },
+    "statusNotification": {
+      "fillForm":"Lütfen formu doldurunuz",
+      "resetPassword":"Şifre başarıyla sıfırlanmıştır",
+      "changePassword":"Şifreler eşleşmiyor",
+      "updatePlaceLocal":"Yerel adres başarıyla güncellenmiştir",
+      "updatePlaceGeographic":"Adres başarıyla güncellenmiştir",
+      "updateIndividual":"Kişi başarıyla güncellenmiştir",
+      "updateOrganization":"Firma başarıyla güncellenmiştir",
+      "updateProduct":"Ürün başarıyla güncellenmiştir",
+      "errorNetwork":"Ağ Hatası! Bağlantı reddedildi",
+      "login":"Kullanıcı adı boş bırakılamaz",
+      "successIndividual":"Kişi başarıyla oluşturulmuştur",
+      "successOrganization":"Firma başarıyla oluşturulmuştur",
+      "successProduct":"Ürün başarıyla oluşturulmuştur",
+      "successOffer":"Teklif başarıyla oluşturulmuştur",
+      "successService":"Servis başarıyla oluşturulmuştur",
+      "successResourceType":"Kaynak Tipi başarıyla oluşturulmuştur",
+      "successResource":"Kaynak başarıyla oluşturulmuştur",
+      "successRule":"Kural başarıyla oluşturulmuştur",
+      "successRequest":"İstek başarıyla oluşturulmuştur",
+      "successPlaceLocal":"Yerel adres başarıyla oluşturulmuştur",
+      "successPlaceGeographic":"Adres başarıyla oluşturulmuştur",
+      "deletePlaceLocal":"Yerel Adres başarıyla silindi",
+      "deletePlaceGeographic":"Adres başarıyla silindi",
+      "deleteIndividual":"Kişi başarıyla silindi",
+      "deleteIndividuals":"Kişi başarıyla silindi",
+      "deleteOffer":"Teklif başarıyla silindi",
+      "deleteOrganization":"Firma başarıyla silindi",
+      "deleteProduct":"Ürün başarıyla silindi",
+      "deleteResource":"Kaynak başarıyla silindi",
+      "deleteResourceType":"Kaynak tipi başarıyla silindi",
+      "deleteRule":"Kural başarıyla silindi",
+      "deleteService":"Servis başarıyla silindi",
+      "warning":"Uyarı",
+      "success":"Başarılı",
+      "info":"Bilgi",
+      "error":"Hata"
+    },
+    "swal":{
+      "title":"Uyarı",
+      "text":"Seçilen alan silinecek",
+      "icon":"Uyarı"
+    }
+  },
+  "login": {
+    "labelLogin": "Lütfen bilgilerinizi doldurup giriş yapınız.",
+    "labelCreateUser": "Lütfen aşağıdaki formu istenen bilgilerle doldurunuz.",
+    "labelResetPassword": "Sistemde kayıtlı eposta adresinizi giriniz, size şifre yenileme epostası göndereceğiz.",
+    "labelLoginError": "Geçersiz giriş bilgisi !",
+    "button": {
+      "resetPassword": "Şifre Sıfırlama",
+      "registerUser": "Yeni Kullanıcı"
+    },
+    "placeholder": {
+      "company": "Şirket Adı",
+      "confirmPassword": "Şifre Tekrar",
+      "reasonRegister": "Giriş isteği nedeninizi yazınız.",
+      "usernameOrEmail": "Kullanıcı adı ve Email"
+    }
+  },
+  "header": {
+    "profile": "Profil",
+    "changeLanguage": "Dil"
+  },
+  "dashboard": {
+    "pageTitle": "Anasayfa",
+    "labelInactive":"Pasif",
+    "labelActive":"Aktif",
+    "labelResourceList":"Kaynak Listesi",
+    "description": "Yönetici kontrollerine sol taraftaki menüden erişebilirsiniz.",
+    "tableFields": ["Durum", "İsim", "Tip"],
+    "newForm": "Kontrol Paneli",
+    "tableChannels": ["", "Kimlik No" , "Kaynaklar", "Seç"],
+    "button": {
+      "addResources": "Kaynak Ekle"
+    }
+  },
+  "individuals": {
+    "pageTitle": "Şahıslar",
+    "description": "",
+    "newForm": "Yeni Kişi",
+    "editForm": "Kişiyi Güncelle",
+    "formDescription": "Formu doğru bilgilerle doldurduğunuzdan emin olun.",
+    "geoPlaceInfo": "Lokasyon kaydetmek için kişi oluşturun.",
+    "userDetailsInfo": "Kullanıcı detayları için kişi oluşturun.",
+    "createUser": {
+      "0": "Sadece kişisel bilgiler kaydedilecek",
+      "1": "Kullanıcı oluşturularak kayıt yapılacak."
+    },
+    "placeholder": {
+      "searchInput": "Ad Soyad",
+      "prefix": "Hitap",
+      "nation": "Uyruk",
+      "marital": "Medeni Durum",
+      "id": "TCK No",
+      "lang": "Dil",
+      "gender": "Cinsiyet",
+      "birthPlace": "Doğum Yeri",
+      "birthDate": "Doğum Tarihi",
+      "birthCountry": "Doğduğu Ülke",
+      "deathDate": "Ölüm Tarihi",
+      "disability": "Engelli Durumu",
+      "roleType":"Rol Tipi",
+      "from":"Başlangıç",
+      "to":"Bitiş",
+      "name":"İsim",
+      "surname":"Soyisim",
+      "lockedUser":"Kilitli Kullanıcı",
+      "identification":"Kimlik Numarası",
+      "username":"Kullanıcı Adı",
+      "deActiveIndividuals":"Aktif Kişiler"
+    },
+    "button": {
+      "new": "Yeni Kişi",
+      "create": "Kişiyi Oluştur",
+      "update": "Kişiyi Güncelle",
+      "createSystemUser": "Sistem Kullanıcısı Yarat",
+      "addLabel": "Yeni Alan Ekle",
+      "addDisability": "Engelilik Durumu Ekle"
+    },
+    "tableFields": ["","ID", "Ad Soyad", "Doğum Yeri", "Doğum Tarihi", "Engelli Durumu", "Eposta", "Tümü", "İşlemler"],
+    "tabTitles": ["Kişisel Detaylar", "Adres Detayları", "Kullanıcı Detayları"],
+    "tableFieldsSearch": ["","ID", "Ad Soyad", "Kişi Rol", "Eposta", "Şehir", "Ülke", "Kilit durum", "İşlemler"],
+    "error": {
+      "name": "Ad",
+      "surname": "Soyad",
+      "roleType": "Rol"
+    }
+  },
+  "products" : {
+    "pageTitle": "Ürünler",
+    "newForm": "Yeni Ürün",
+    "editForm": "Ürünü Güncelle",
+    "placeholder": {
+      "searchInput": "Ürünler",
+      "organization": "Firma",
+      "productName": "Ürün Adı",
+      "productDescription": "Ürün Tanımı",
+      "productStatus": "Ürün Durumu",
+      "validDate": "Geçerlilik Tarihi",
+      "productCapacity": "Kapasite",
+      "productType": "Ürün Tipi"
+    },
+    "button": {
+      "new": "Yeni Ürün"
+    },
+    "tableFields": ["", "Ürün Adı", "Tanım", "Durum", "Kapasite", "Tip", "Seç", "İşlemler"]
+  },
+  "offers": {
+    "pageTitle": "Teklifler",
+    "newForm": "Yeni Teklif",
+    "editForm": "Teklifi Güncelle",
+    "newFormParty": "Yeni Kişi",
+    "editFormParty": "Kişi Teklifini Güncelle",
+    "placeholder": {
+      "organization": "Firma",
+      "product": "Ürün",
+      "offerName": "Teklif Başlığı",
+      "offerDescription": "Teklif Tanımı",
+      "validDate": "Geçerlilik"
+    },
+    "button": {
+      "new": "Yeni Teklif"
+    },
+    "tableFields": ["", "Firma", "Ürün", "Teklif", "Teklif Tanımı", "Kabul Edenler", "Seç", "İşlemler"]
+  },
+  "organization": {
+    "pageTitle": "Firmalar",
+    "description": "",
+    "form": "Yeni Firmalar",
+    "formDescription": "Lütfen alanları doğru girdiğinizden emin olun.",
+    "localPlaceInfo": "Yerel yer eklemek için bir firma oluşturun",
+    "geoPlaceInfo": "Lokasyon kaydetmek için firma oluşturun.",
+    "placeholder": {
+      "searchInput": "Firmalar",
+      "organizationName1": "Adı",
+      "organizationName2": "Adı 2",
+      "idtax": "Kimlik / Vergi Numarası",
+      "startDate": "Firma Kurulum Tarihi",
+      "legal": "Resmi Kurum",
+      "language": "Varsayılan dil",
+      "from":"Başlangıç",
+      "to":"Bitiş",
+      "deactivated":"Aktif organizasyonlar",
+      "identification":"Kimlik Numarası",
+      "organizationRole":"Organizasyon Rol",
+      "city":"Şehir",
+      "country":"Ülke"
+    },
+    "button": {
+      "new": "Yeni Firma",
+      "create": "Firma Oluştur",
+      "update": "Firmayı Güncelle"
+    },
+    "tableFields": ["", "Kimlik Numarası", "Firma Adı", "Dil", "Aktivite Başlangıç", "Tümü", "İşlemler"],
+    "tabTitles": ["Firma Detayları", "Yerel Adres", "Adres Detayları"]
+  },
+  "settings" : {
+    "pageTitle": "Ayarlar",
+    "placeholder": {
+      "lookupLabel": "Yeni Kategori",
+      "code": "Kod",
+      "tableName": "Tablo Adı",
+      "language": "Dil"
+    },
+    "button" : {
+      "addLabel": "Dil seçeneği ile yeni etiket ekle",
+      "addNewLookupRow": "Yeni Ekle",
+      "create": "Yeni Kategori Oluştur"
+    },
+    "modalTitle":"Yeni Arama Etiketi Ekle",
+    "form":"Yeni Engel Durumu",
+    "childModalTitle":"Arama Etiketi Düzenle"
+  },
+  "userProfiles": {
+    "userDetails": {
+      "locked": "Kilitli ?",
+      "lockedDesc": {
+        "0": "Kullanıcı giriş yapabilir.",
+        "1": "Kilitliyken kullanıcı giriş yapamaz."
+      },
+      "forceEmail": "Eposta aktivasyonuna zorla",
+      "forceEmailDesc": {
+        "0": "Onay işlemi gerekmez.",
+        "1": "Kullanıcı email ile gelen linke tıklamalıdır."
+      },
+      "forceDetails": "Profil detaylarını doldurmaya zorla",
+      "forceDetailsDesc": {
+        "0": "Profil detayları önemli değildir.",
+        "1": "Profil detayları doldurulmak zorunda."
+      },
+      "involvements": "Yetki seçimleri"
+    },
+    "tabTitles": ["Kullanıcı Detayları", "Adres Bilgisi"],
+    "button":{
+      "changePassword": "Şifre Değiştir",
+      "unSubsFromIotManager":"Kullanıcıyı Sil",
+      "next":"İleri/Adres"
+    }
+  },
+  "placeLocal": {
+    "title": "Yerel Konum",
+    "placeholder": {
+      "compound": "Toplu Yerleşim Alanı",
+      "type": "Tip",
+      "definition": "Tanım"
+    },
+    "savedItem": "Kaydedilen Adresler"
+  },
+  "placeGeographic": {
+    "title": "Adres Bilgileri",
+    "placeholder": {
+      "addressLine1": "Adres Satırı 1",
+      "addressLine2": "Adres Satırı 2",
+      "city": "Şehir",
+      "town": "İlçe",
+      "zipCode": "Posta Kodu",
+      "stateProvince": "Eyalet/İl",
+      "country": "Ülke",
+      "siteName": "Site Adı",
+      "siteCode": "Site Kodu",
+      "siteType": "Site Tipi",
+      "timeZone": "Saat Dilimi",
+      "defaultAdress":"Varsayılan Adres"
+    },
+    "required": "gerekli",
+    "savedItem": "Kaydedilen Adresler"
+  },
+  "service": {
+    "title": "Servis Bilgisi",
+    "name": "Servis Adı",
+    "serviceDto": {
+      "serviceName": "Servis Adı",
+      "serviceDescription": "Servis Açıklaması",
+      "serviceActive": "Servis Aktif",
+      "serviceCap": "Servis Kapasitesi",
+      "isStatefulService": "Servis Durumu",
+      "serviceConfiguration": "Servis Yapılandırması",
+      "serviceConfigurationSpec": "Servis Yapılandırması Ayarları"
+
+    },
+    "button": {
+      "new": "Yeni Servis",
+      "retrieveSwitchButton": "Kapalı Servislerde gelsin",
+      "allocateProductService": "Servis Ürününü Güncelle"
+    },
+    "tableItems":{
+      "organization":"Firma",
+      "product":"Ürün",
+      "service":"Servis",
+      "numberOfThingsConnected":"Bağlı Cihaz Sayısı",
+      "transactions":"İşlemler"
+    }
+  },
+  "biRequests": {
+    "pageTitle": "İstekler",
+    "tableFields": ["İstek Tarihi", "İstek Yapan", "Açıklama", "Eposta", "Tip", "Durum", "Kilitli", ""],
+    "placeholder": {
+      "from": "Başlangıç",
+      "to": "Bitiş",
+      "type": "BI/SR Tipi",
+      "status": "Statü"
+    },
+    "detailModal": {
+      "title": "Detay",
+      "requestDate": "İstek Tarihi",
+      "description": "Açıklama",
+      "status": "Durum",
+      "type:": "Tip",
+      "locked": "Kilitli",
+      "placeholder": {
+        "forceEmail": "Eposta aktivasyonuna zorla",
+        "forceDetails": "Profil detaylarını doldurmaya zorla",
+        "assignRoles": "Rol Tanımları",
+        "involvementTypes": "Yetki Tipleri",
+        "multipleSelect": "Çoklu seçim için CTRL tuşuna basılı tutun"
+      },
+      "button": {
+        "activate": "Kullanıcıyı Aktifleştir",
+        "ignore": "İsteği yoksay"
+      }
+    }
+  },
+  "services": {
+    "pageTitle": "Servisler"
+  },
+  "resources": {
+    "pageTitle": "Kaynaklar",
+    "newForm": "Yeni Kaynak",
+    "editForm": "Güncelle",
+    "selectType": "Kaynak Tipi Seç",
+    "formInfo": "Lütfen ## karakterlerini gerçek değerler ile değiştiriniz.",
+    "button": {
+      "new": "Yeni Kaynak",
+      "getConfig": "Form Oluştur",
+      "party": "Partiye Bağla",
+      "place": "Konuma Bağla"
+    },
+    "placeholder": {
+      "service": "Servis",
+      "status": "Durum",
+      "name": "Kaynak Adı",
+      "description": "Kaynak Tanımı",
+      "resourceType": "Kaynak Tipi",
+      "organization": "Firma",
+      "product": "Ürün"
+    },
+    "label": {
+      "resource":"Kaynak Adı"
+    },
+    "tableFields": ["", "Kaynak Adı", "İşlemler"]
+  },
+  "resourceTypes": {
+    "pageTitle": "Kaynak Tipleri",
+    "newForm": "Yeni Kaynak Tipi",
+    "editForm": "Kaynak Tipini Güncelle",
+    "button": {
+      "new": "Yeni Kaynak Tipi",
+      "backResource": "Kaynaklar Sayfasına Dön"
+    },
+    "warning": "Lütfen önce ürün seçiniz ve data modeli yükleyiniz!",
+    "warningName": "Lütfen kaynak tipinin adını giriniz!",
+    "tableFields": ["", "Organizasyon", "Ürün", "Kaynak Tipi Adı", "Tanımlama", "İşlemler"],
+    "chooseFile":"Dosya Seç",
+    "action": "İşlem",
+    "placeholder": {
+      "name": "Kaynak Tipi Adı",
+      "description": "Kaynak Tipi Tanımı",
+      "coreResourceType": "Çekirdek Kaynak Tipi",
+      "dataModel": "Veri Modeli",
+      "createConfig": "Oluşturma Ayarları",
+      "createCall": "Oluşturma IoT Çağrısı",
+      "readConfig": "Okuma Ayarları",
+      "readCall": "Okuma IoT Çağrısı",
+      "writeConfig": "Yazma Ayarları",
+      "writeCall": "Yazma IoT Çağrısı",
+      "writeAttrConfig": "Yazma Öznitelikleri Ayarları",
+      "writeAttrCall": "Yazma Öznitelikleri IoT Çağrısı",
+      "observeConfig": "Gözleme Ayarları",
+      "observeCall": "Gözlem IoT Çağrısı",
+      "deleteConfig": "Silme Ayarları",
+      "deleteCall": "Silme IoT Çağrısı",
+      "executeConfig": "Çalıştırma Ayarları",
+      "executeCall": "Çalıştırma IoT Çağrısı",
+      "discoverConfig": "Keşif Ayarları",
+      "discoverCall": "Keşif IoT Çağrısı"
+    }
+  },
+  "rules": {
+    "pageTitle": "Kurallar",
+    "placeholder": {
+      "organization":"Firma",
+      "product":"Ürün",
+      "service":"Servis"
+    },
+    "conditionForm": {
+      "label": "Koşul ekle : ",
+      "addCondition": "Ekle",
+      "infoText": "Lütfen önce koşul eklemek istediğiniz thing değerini seçin",
+      "cond": {
+        "0": "Son Değer", "1": "Averaj", "2": "Std Dev", "3": "Max", "4": "Min", "5": "Trend", "6": "Benzersiz Say"
+      },
+      "inTime": {
+        "0": "Milisaniye", "1": "Saniye", "2": "Dakika", "3": "Saat", "4": "Gün"
+      },
+      "operand": {
+        "0": ">", "1": "<", "2": "="
+      }
+    },
+    "actionForm": {
+      "label": "Aksiyon ekle : ",
+      "addAction": "Ekle",
+      "infoText": "Lütfen, aksiyon eklemek için write / execute buttonlarını kullanın",
+      "valueText": "Değer : "
+    },
+    "button":{
+      "new":"Yeni Kural",
+      "openDashboard":"Kuralları Göster",
+      "addCondition": "Koşul Ekle",
+      "addAction": "Aksiyon Ekle",
+      "actuator": "Çalıştırıcı"
+    },
+    "tableFields": ["İsim", "Tanım", "Etkinleştirma", "İşlemler"]
+  },
+  "offerBindings": {
+    "pageTitle": "Teklif Kısmı",
+    "newForm": "Yeni Parti",
+    "form": "Yeni Parti",
+    "tabTitles": ["Kişiler", "Teklif Bölümü"],
+    "tableFieldsForm": ["", "Ad Soyad", "Şehir", "İlçe", "Ülke", "Bağla"],
+    "tableFieldsSegment": ["", "Ad Soyad", "Şehir", "İlçe", "Ülke", "Teklif Cevabı", "İşlemler"],
+    "placeholder": {
+      "organization": "Firma",
+      "product": "Ürün",
+      "offer": "Teklif"
+    },
+    "button":{
+      "new":"Parti Dahil Et",
+      "changeResponse":"Cevabı değiştir",
+      "bind":"Servis'e bağla"
+    }
+  },
+  "actuators": {
+    "pageTitle": "Actuators",
+    "newForm": "Yeni Çalıştırıcı",
+    "placeholder": {
+      "title": "Title",
+      "organization": "Firma",
+      "product": "Ürün"
+    },
+    "tableFields": ["#", "Başlık", "İşlemler"],
+    "button":{
+      "new":"Yeni Çalıştırıcı"
+    }
+  },
+  "sidebar":{
+    "dashboard": "Kontrol Paneli",
+    "individuals": "Kişiler",
+    "organizations": "Firmalar",
+    "products" : "Ürünler",
+    "offers": "Teklifler",
+    "services": "Servisler",
+    "resourceTypes": "Kaynak Tipleri",
+    "resources": "Kaynaklar",
+    "ruleEngine": "Kurallar",
+    "settings": "Ayarlar",
+    "requests": "İstekler"
+  }
+}

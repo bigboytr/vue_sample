@@ -1,0 +1,307 @@
+{
+  "smartObjects":[
+    {
+      "instances":[
+        {
+          "resources":[
+            {
+              "operations":"E",
+              "name":"Reset Min and Max Measured Values",
+              "description":"Reset the Min and Max Measured Values to Current Value",
+              "targetResource":"/3303/0/5605",
+              "id":5605
+            },
+            {
+              "operations":"R",
+              "name":"Sensor Units",
+              "description":"Measurement Units Definition e.g. Rate, example units = Feet per Second",
+              "targetResource":"/3303/0/5701",
+              "id":5701
+            },
+            {
+              "operations":"R",
+              "name":"Max Measured Value",
+              "description":"The maximum value measured by the sensor since power ON or reset",
+              "targetResource":"/3303/0/5602",
+              "id":5602
+            },
+            {
+              "operations":"R",
+              "name":"Sensor Value",
+              "description":"Last or Current Measured Value from the Sensor",
+              "targetResource":"/3303/0/5700",
+              "id":5700
+            },
+            {
+              "operations":"R",
+              "name":"Min Measured Value",
+              "description":"The minimum value measured by the sensor since power ON or reset",
+              "targetResource":"/3303/0/5601",
+              "id":5601
+            }
+          ],
+          "id":0
+        },
+        {
+          "resources":[
+            {
+              "operations":"E",
+              "name":"Reset Min and Max Measured Values",
+              "description":"Reset the Min and Max Measured Values to Current Value",
+              "targetResource":"/3303/1/5605",
+              "id":5605
+            },
+            {
+              "operations":"R",
+              "name":"Sensor Units",
+              "description":"Measurement Units Definition e.g. Rate, example units = Feet per Second",
+              "targetResource":"/3303/1/5701",
+              "id":5701
+            },
+            {
+              "operations":"R",
+              "name":"Max Measured Value",
+              "description":"The maximum value measured by the sensor since power ON or reset",
+              "targetResource":"/3303/1/5602",
+              "id":5602
+            },
+            {
+              "operations":"R",
+              "name":"Sensor Value",
+              "description":"Last or Current Measured Value from the Sensor",
+              "targetResource":"/3303/1/5700",
+              "id":5700
+            },
+            {
+              "operations":"R",
+              "name":"Min Measured Value",
+              "description":"The minimum value measured by the sensor since power ON or reset",
+              "targetResource":"/3303/1/5601",
+              "id":5601
+            }
+          ],
+          "id":1
+        }
+      ],
+      "name":"Temperature",
+      "id":3303
+    },
+    {
+      "instances":[
+        {
+          "resources":[
+            {
+              "operations":"RW",
+              "name":"Default Minimum Period",
+              "description":"The default value the LwM2M Client should use for the Minimum Period of an Observation in the absence of this parameter being included in an Observation.\nIf this Resource doesn\u2019t exist, the default value is 0.",
+              "targetResource":"/1/0/2",
+              "id":2
+            },
+            {
+              "operations":"RW",
+              "name":"Binding",
+              "description":"This Resource defines the transport binding configured for the LwM2M Client.\nIf the LwM2M Client supports the binding specified in this Resource, the LwM2M Client MUST use that transport for the Current Binding Mode.",
+              "targetResource":"/1/0/7",
+              "id":7
+            },
+            {
+              "operations":"RW",
+              "name":"Notification Storing When Disabled or Offline",
+              "description":"If true, the LwM2M Client stores \u201cNotify\u201d operations to the LwM2M Server while the LwM2M Server account is disabled or the LwM2M Client is offline. After the LwM2M Server account is enabled or the LwM2M Client is online, the LwM2M Client reports the stored \u201cNotify\u201d operations to the Server.\nIf false, the LwM2M Client discards all the \u201cNotify\u201d operations or temporarily disables the Observe function while the LwM2M Server is disabled or the LwM2M Client is offline.\nThe default value is true.\nThe maximum number of storing Notifications per Server is up to the implementation.",
+              "targetResource":"/1/0/6",
+              "id":6
+            },
+            {
+              "operations":"RW",
+              "name":"Default Maximum Period",
+              "description":"The default value the LwM2M Client should use for the Maximum Period of an Observation in the absence of this parameter being included in an Observation.",
+              "targetResource":"/1/0/3",
+              "id":3
+            },
+            {
+              "operations":"R",
+              "name":"Short Server ID",
+              "description":"Used as link to associate server Object Instance.",
+              "targetResource":"/1/0/0",
+              "id":0
+            },
+            {
+              "operations":"RW",
+              "name":"Lifetime",
+              "description":"Specify the lifetime of the registration in seconds (see Section 5.3 Registration).",
+              "targetResource":"/1/0/1",
+              "id":1
+            },
+            {
+              "operations":"E",
+              "name":"Registration Update Trigger",
+              "description":"If this Resource is executed the LwM2M Client MUST perform an \u201cUpdate\u201d operation with this LwM2M Server using that transport for the Current Binding Mode.",
+              "targetResource":"/1/0/8",
+              "id":8
+            }
+          ],
+          "id":0
+        }
+      ],
+      "name":"LwM2M Server",
+      "id":1
+    },
+    {
+      "instances":[
+        {
+          "resources":[
+            {
+              "operations":"R",
+              "name":"Longitude",
+              "description":"The decimal notation of longitude, e.g., 153.21760 [World Geodetic System 1984].",
+              "targetResource":"/6/0/1",
+              "id":1
+            },
+            {
+              "operations":"R",
+              "name":"Timestamp",
+              "description":"The timestamp of when the location measurement was performed.",
+              "targetResource":"/6/0/5",
+              "id":5
+            },
+            {
+              "operations":"R",
+              "name":"Latitude",
+              "description":"The decimal notation of latitude, e.g., -43.5723 [World Geodetic System 1984].",
+              "targetResource":"/6/0/0",
+              "id":0
+            }
+          ],
+          "id":0
+        }
+      ],
+      "name":"Location",
+      "id":6
+    },
+    {
+      "instances":[
+        {
+          "resources":[
+            {
+              "operations":"R",
+              "name":"Device Type",
+              "description":"Type of the device (manufacturer specified string: e.g., smart meters / dev Class\u2026)",
+              "targetResource":"/3/0/17",
+              "id":17
+            },
+            {
+              "operations":"R",
+              "name":"Memory Total",
+              "description":"Total amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes).",
+              "targetResource":"/3/0/21",
+              "id":21
+            },
+            {
+              "operations":"R",
+              "name":"Software Version",
+              "description":"Current software version of the device (manufacturer specified string). On elaborated LwM2M device, SW could be split in 2 parts: a firmware one and a higher level software on top.\nBoth pieces of Software are together managed by LwM2M Firmware Update Object (Object ID 5)",
+              "targetResource":"/3/0/19",
+              "id":19
+            },
+            {
+              "operations":"RW",
+              "name":"Timezone",
+              "description":"Indicates in which time zone the LwM2M Device is located, in IANA Timezone (TZ) database format.",
+              "targetResource":"/3/0/15",
+              "id":15
+            },
+            {
+              "operations":"RW",
+              "name":"Current Time",
+              "description":"Current UNIX time of the LwM2M Client.\nThe LwM2M Client should be responsible to increase this time value as every second elapses.\nThe LwM2M Server is able to write this Resource to make the LwM2M Client synchronized with the LwM2M Server.",
+              "targetResource":"/3/0/13",
+              "id":13
+            },
+            {
+              "operations":"R",
+              "name":"Hardware Version",
+              "description":"Current hardware version of the device",
+              "targetResource":"/3/0/18",
+              "id":18
+            },
+            {
+              "operations":"R",
+              "name":"Memory Free",
+              "description":"Estimated current available amount of storage space which can store data and software in the LwM2M Device (expressed in kilobytes).",
+              "targetResource":"/3/0/10",
+              "id":10
+            },
+            {
+              "operations":"RW",
+              "name":"UTC Offset",
+              "description":"Indicates the UTC offset currently in effect for this LwM2M Device. UTC+X [ISO 8601].",
+              "targetResource":"/3/0/14",
+              "id":14
+            },
+            {
+              "operations":"R",
+              "name":"Battery Status",
+              "description":"This value is only valid for the Device Internal Battery if present (one Available Power Sources Resource Instance value is 1).\nBattery\nStatus\tMeaning\tDescription\n0\tNormal\tThe battery is operating normally and not on power.\n1\tCharging\tThe battery is currently charging.\n2\tCharge Complete\tThe battery is fully charged and still on power.\n3\tDamaged\tThe battery has some problem.\n4\tLow Battery\tThe battery is low on charge.\n5\tNot Installed\tThe battery is not installed.\n6\tUnknown\tThe battery information is not available.",
+              "targetResource":"/3/0/20",
+              "id":20
+            },
+            {
+              "operations":"R",
+              "name":"Error Code",
+              "description":"0=No error\n1=Low battery power\n2=External power supply off\n3=GPS module failure\n4=Low received signal strength\n5=Out of memory\n6=SMS failure\n7=IP connectivity failure\n8=Peripheral malfunction\n\nWhen the single Device Object Instance is initiated, there is only one error code Resource Instance whose value is equal to 0 that means no error. When the first error happens, the LwM2M Client changes error code Resource Instance to any non-zero value to indicate the error type. When any other error happens, a new error code Resource Instance is created.\nThis error code Resource MAY be observed by the LwM2M Server. How to deal with LwM2M Client\u2019s error report depends on the policy of the LwM2M Server.",
+              "targetResource":"/3/0/11",
+              "id":11
+            },
+            {
+              "operations":"R",
+              "name":"Supported Binding and Modes",
+              "description":"Indicates which bindings and modes are supported in the LwM2M Client. The possible values of Resource are combination of \"U\" or \"UQ\" and \"S\" or \"SQ\".",
+              "targetResource":"/3/0/16",
+              "id":16
+            },
+            {
+              "operations":"R",
+              "name":"Battery Level",
+              "description":"Contains the current battery level as a percentage (with a range from 0 to 100). This value is only valid for the Device internal Battery if present (one Available Power Sources Resource Instance is 1).",
+              "targetResource":"/3/0/9",
+              "id":9
+            },
+            {
+              "operations":"R",
+              "name":"Manufacturer",
+              "description":"Human readable manufacturer name",
+              "targetResource":"/3/0/0",
+              "id":0
+            },
+            {
+              "operations":"R",
+              "name":"Serial Number",
+              "description":"Serial Number",
+              "targetResource":"/3/0/2",
+              "id":2
+            },
+            {
+              "operations":"R",
+              "name":"Model Number",
+              "description":"A model identifier (manufacturer specified string)",
+              "targetResource":"/3/0/1",
+              "id":1
+            },
+            {
+              "operations":"R",
+              "name":"Firmware Version",
+              "description":"Current firmware version of the Device.The Firmware Management function could rely on this resource.",
+              "targetResource":"/3/0/3",
+              "id":3
+            }
+          ],
+          "id":0
+        }
+      ],
+      "name":"Device",
+      "id":3
+    }
+  ],
+  "name":"ecube10",
+  "id":0
+}

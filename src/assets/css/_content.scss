@@ -1,0 +1,58 @@
+@import "mixins";
+
+/* =================================================================================
+Content
+================================================================================= */
+.content {
+  margin-top: 60px;
+  margin-left: 190px;
+  padding: 15px 0;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    margin-left: 0;
+  }
+
+  @media (min-width: 992px) and (max-width: 1024px) {
+    margin-left: 0;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1200px) {
+    margin-left: 0;
+  }
+
+  .btn {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding: 4px 10px;
+    height: initial;
+    //border: 2px transparent solid;
+
+    /*&:hover {
+      border: 2px #ddd solid;
+    }*/
+  }
+  .table {
+    tbody > tr > td {
+      padding: 2px 5px;
+      vertical-align: middle;
+    }
+    .btn {
+      @include no-radius;
+    }
+    &.biDetailTable {
+      tbody > tr > td {
+        padding: 5px;
+      }
+    }
+    .form-control {
+      @include no-radius;
+    }
+  }
+
+}
+

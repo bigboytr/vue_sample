@@ -1,0 +1,297 @@
+// Theme switcher for IOT Manager
+@import "colors";
+@import "mixins";
+
+@mixin theme($name, $color) {
+  .#{$name} {
+
+    height: 100%;
+    @if ($name == "dark") {
+      background-color: #{map-get($color, "layer1")};
+    } @else {
+      background-image: linear-gradient(#{map-get($color, 'layer2')}, #{map-get($color, 'layer1')});
+    }
+    color:  #{map-get($color, 'text')};
+
+    a {
+      color:  #{map-get($color, 'link-blue')};
+    }
+
+    hr {
+      border-color: #{map-get($color, 'hr-color')}
+    }
+
+    label {
+      @if ($name == "dark") {
+        font-weight: 400;
+      } @else {
+        font-weight: 600;
+      }
+    }
+
+    .header {
+      background-color: #{map-get($color, 'layer0')};
+
+      .logo {
+        color: #{map-get($color, 'brand-white')};
+      }
+
+      .user-info {
+        .btn {
+          color: #{map-get($color, 'light-gray')};
+        }
+      }
+    }
+
+
+    .sidebar {
+
+      .nav {
+        a {
+          color: #{map-get($color, 'text')};
+
+          &:active {
+            color: #{map-get($color, 'text')};
+          }
+          &:hover,
+          &:focus {
+            //background: linear-gradient(to top, #{map-get($color, 'sidebar-a-hover')}, transparent 20%);
+            background: #{map-get($color, 'sidebar-a-hover')};
+          }
+        }
+      }
+    }
+    /* =================================================================================
+    Dashboard Theme
+    ================================================================================= */
+    .dashboard {
+
+      .panel-default {
+        /*box-shadow: none;*/
+        box-shadow: 1px 1px 1px #{map-get($color, 'shadow')};
+        border: 1px #ddd solid;
+        background: linear-gradient(to bottom, transparent, #{map-get($color, 'dashboard-panel-bg')} 90%);
+
+        &:hover {
+          box-shadow: 1px 5px 15px #{map-get($color, 'shadow')};
+        }
+      }
+
+      .panel-default > .panel-heading {
+        background-color: #{map-get($color, 'dashboard-panel-title')};
+        color: #{map-get($color, 'text')};
+      }
+    }
+    /* =================================================================================
+    Modal Theme
+    ================================================================================= */
+    .modal-content {
+      background-image: linear-gradient(#{map-get($color, 'layer2')}, #{map-get($color, 'layer1')});
+      color:  #{map-get($color, 'text')};
+    }
+    /* =================================================================================
+    Texts Theme
+    ================================================================================= */
+    .text-danger {
+      color: #{map-get($color, 'brand-red')};
+    }
+    .text-success {
+      color: #{map-get($color, 'brand-green')};
+    }
+    .text-warning {
+      color: #{map-get($color, 'brand-orange')};
+    }
+    .text-primary {
+      color: #{map-get($color, 'brand-blue')};
+    }
+    .text-theme {
+      color: #{map-get($color, 'text-theme')};
+    }
+    .text-theme-login {
+      color: #{map-get($color, 'text-theme-login')};
+    }
+    /* =================================================================================
+    Labels & Buttons Theme
+    ================================================================================= */
+    .label-danger, .btn-danger {
+      background-color: #{map-get($color, 'brand-red')};
+    }
+    .label-success, .btn-success {
+      background-color: #{map-get($color, 'brand-green')};
+    }
+    .label-warning, .btn-warning {
+      background-color: #{map-get($color, 'brand-orange')};
+    }
+    .label-primary, .btn-primary {
+      background-color: #{map-get($color, 'brand-blue')};
+
+      &:hover {
+        background-color: #{map-get($color, 'link-blue')};
+      }
+    }
+    .btn-default {
+      background-color: #{map-get($color, 'btn-default')};
+      color: #{map-get($color, 'btn-default-color')};
+
+      &:hover {
+        background-color: #{map-get($color, 'btn-default-hover')};
+      }
+    }
+    .btn-transparent {
+      &:hover {
+        color: #{map-get($color, 'btn-default-color')};
+      }
+    }
+    .btn-link {
+      color: #{map-get($color, 'link-blue')};
+    }
+    /* =================================================================================
+    Form Theme
+    ================================================================================= */
+    .form-control {
+      background-color: #{map-get($color, 'input-bg')};
+      color: #{map-get($color, 'text')};
+      border-color: #{map-get($color, 'input-border')};
+    }
+    /* =================================================================================
+    Panel Theme
+    ================================================================================= */
+    .panel {
+
+      @if ($name == "light") {
+        @include shadow(20px, #{map-get($color, 'shadow')});
+      }
+
+      &.panel-primary,
+      &.panel-info,
+      &.panel-default {
+        background-color: #{map-get($color, 'layer2')};
+      }
+
+      &.panel-primary>.panel-heading,
+      &.panel-default>.panel-heading {
+
+        background-color: #{map-get($color, 'layer2')};
+        border-color: #{map-get($color, 'layer1')};
+        color: #{map-get($color, 'text')};
+
+        /*@if ($name == "dark") {
+          background-color: #{map-get($color, 'layer2')};
+          border-color: #{map-get($color, 'layer1')};
+          color: #{map-get($color, 'text')};
+        }
+        @else {
+          background-color: #{map-get($color, 'panel-title-bg')};
+          border-color: #{map-get($color, 'panel-title-bg')};
+          color: #{map-get($color, 'panel-title-color')};
+        }*/
+
+      }
+
+      &.panel-info>.panel-heading {
+
+        @if ($name == "dark") {
+          background-color: #{map-get($color, 'layer2')};
+          border-color: #{map-get($color, 'layer1')};
+          color: #{map-get($color, 'text')};
+        }
+        @else {
+          background-color: #{map-get($color, 'panel-title-bg2')};
+          border-color: #{map-get($color, 'panel-title-bg2')};
+          color: #{map-get($color, 'text')};
+        }
+      }
+    }
+    /* =================================================================================
+    Well Section Theme
+    ================================================================================= */
+    .well {
+      background-color: #{map-get($color, 'layer1')};
+    }
+    /* =================================================================================
+    Table Theme
+    ================================================================================= */
+    .table-striped>tbody>tr:nth-of-type(odd) {
+      background-color: #{map-get($color, 'table-odd')};
+    }
+    .table-striped>tbody>tr:nth-of-type(even) {
+      background-color: #{map-get($color, 'table-even')};
+    }
+    /* =================================================================================
+    DropDown Menu Theme
+    ================================================================================= */
+    .dropdown-menu {
+      background: #{map-get($color, 'dd-background')};
+
+      &>li {
+        color: #{map-get($color, 'disable-text')};
+      }
+      &>li>a {
+        color: #{map-get($color, 'text')};
+      }
+      &>li>a:focus,
+      &>li>a:hover {
+        background: #{map-get($color, 'dd-link-hover')};
+      }
+
+      .divider {
+        background: #{map-get($color, 'dd-divider')};
+      }
+    }
+    /* =================================================================================
+    Tabs Theme
+    ================================================================================= */
+
+    .nav-tabs > li > a {
+      color: #{map-get($color, 'tab-title-color')};
+
+      &:hover {
+        color: #{map-get($color, 'text')};
+      }
+    }
+    .nav-tabs>li.active>a,
+    .nav-tabs>li.active>a:focus,
+    .nav-tabs>li.active>a:hover {
+      color: #{map-get($color, 'text')};
+    }
+    /* =================================================================================
+    List Group Theme
+    ================================================================================= */
+    .list-group-item {
+      background: #{map-get($color, 'list-group-item-bg')};
+      border-color: #{map-get($color, 'modal-tab-border')};
+    }
+    /* =================================================================================
+    Alert Box Theme
+    ================================================================================= */
+    .alert {
+      &.alert-info {
+        background-color: #{map-get($color, 'brand-blue')};
+        color: #{map-get($color, 'brand-white')};
+      }
+      &.alert-danger {
+        background-color: #{map-get($color, 'brand-red')};
+        color: #{map-get($color, 'brand-red')};
+      }
+    }
+    /* =================================================================================
+    Smart Object Modal Theme
+    ================================================================================= */
+    .smart-object-container {
+
+      .condition-overlay {
+
+        fieldset {
+          background: linear-gradient(bottom, #{map-get($color, 'layer1')} 10%, #{map-get($color, 'layer2')} 60%);
+        }
+      }
+    }
+
+  }
+}
+
+// Including themes
+// By looping through the $themes map
+@each $key, $value in $themes {
+  @include theme($key, $value);
+}

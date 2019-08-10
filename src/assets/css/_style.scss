@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+@import "mixins";
+
+// measure
+$default-font-size: 13px;
+
+html,body {
+  height: 100%;
+}
+
+body {
+  background-attachment: fixed;
+  margin: 0;
+  font-size: $default-font-size;
+  outline: 0;
+  font-family: 'Open Sans', sans-serif;
+  height: 100%;
+  position: relative;
+  color: inherit;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+}
+
+.icon {
+  vertical-align: middle;
+  speak: none;
+  font-style: normal;
+}
+
+/* =================================================================================
+Bootstrap Overriding
+================================================================================= */
+.btn.active.focus, .btn.active:focus, .btn.focus,
+.btn:active.focus, .btn:active:focus, .btn:focus {
+  outline: none;
+}
+.h1, .h2, .h3, .h4, .h5, .h6,
+h1, h2, h3, h4, h5, h6 {
+  margin: 10px;
+}
+hr {
+  margin: 10px 0;
+}
+.container-fluid.light,
+.container-fluid.dark {
+  @include transition(all, .3s);
+}
+
+/* =================================================================================
+Buttons
+================================================================================= */
+.btn {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+
+  border: none;
+  @include transition(background-color, .2s);
+
+
+  &:hover {
+    @include transition(background-color, .5s);
+
+  }
+}
+.btn-transparent {
+  background-color: transparent;
+}
+
+/* =================================================================================
+Panels
+================================================================================= */
+.panel {
+  //@include shadow(15px);
+  @include no-radius;
+  @include transition(all, .5s);
+  border: none;
+
+  .panel-heading {
+    @include no-radius;
+  }
+}
+/* =================================================================================
+Alerts
+================================================================================= */
+.alert {
+
+  @include no-radius;
+
+  &.alert-info {
+    //@include shadow(5px, #767676);
+    @include padding(8px, false);
+    @include border(0, false);
+  }
+}
+
+/* =================================================================================
+Forms
+================================================================================= */
+.form-control {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  padding: 4px 10px;
+  //height: initial;
+  height: 28.4px;
+  line-height: 1.42857143 !important;
+}
+
+.dropdown {
+
+  .dropdown-menu {
+    @include no-radius;
+    @include shadow(0px, transparent);
+    //@include shadow(10px, #767676);
+    //@include margin(0, false);
+    @include padding(0, false);
+
+    li {
+      font-size: $default-font-size;
+
+      a {
+        padding: 5px 20px;
+      }
+    }
+
+    .divider {
+      @include margin(3px 0, false);
+    }
+  }
+
+  .dropdown-menu-right:before {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    //position: absolute;
+    top: -10px;
+    right: 15px;
+  }
+
+}
+/* =================================================================================
+Modal
+================================================================================= */
+.modal-content {
+  @include no-radius;
+
+  .tab-content {
+    padding-top: 20px;
+  }
+}
+/* =================================================================================
+Tabs
+================================================================================= */
+.nav-tabs {
+  border: none;
+
+  li a {
+    color: inherit;
+    border: none;
+    border-bottom: 3px transparent solid;
+
+    &:hover {
+      background-color: transparent;
+
+      border-bottom: 3px transparent solid;
+    }
+  }
+  li.active > a,
+  li.active > a:focus,
+  li.active > a:hover {
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px #0082F0 solid;
+  }
+}
+/* =================================================================================
+Global Classes
+================================================================================= */
+[v-cloak] {
+  display: none;
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  background: url('../bg.png') no-repeat center bottom;
+  position: fixed;
+  z-index: 0;
+}
+.mx-datepicker{
+  width: 100%;
+}
+/* =================================================================================
+Recursive Table Plugin
+================================================================================= */
+.yy_table {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+
+  .yy_head {
+
+    .yy_row {
+      font-weight: 700;
+      border-bottom: 1px #ddd solid;
+    }
+
+    .yy_cell {
+      padding: 8px;
+    }
+  }
+
+
+  .yy_row {
+
+    display: block;
+
+    .btn {
+      -webkit-border-radius: 0 !important;
+      -moz-border-radius: 0 !important;
+      border-radius: 0 !important;
+    }
+  }
+
+  .yy_cell {
+
+    display: inline-block;
+    padding: 2px 5px;
+    vertical-align: middle;
+    line-height: 1.42857143;
+    height: 30.56px;
+
+    &.cell1 {
+      width: 75%;
+    }
+    &.cell2 {
+      width: 25%;
+    }
+  }
+
+  &.table-bordered {
+
+    .yy_head {
+      .yy_cell:first-child {
+        border-right: 1px #ddd solid;
+      }
+    }
+
+    .yy_body {
+      .yy_cell {
+        border-top: 1px #ddd solid;
+        border-left: 1px #ddd solid;
+      }
+      .yy_cell:first-child {
+        border-left: none
+      }
+    }
+
+  }
+
+  &.table-striped {
+
+    /*.yy_body .yy_row:nth-of-type(odd) {
+      background-color: #f9f9f9;
+    }*/
+
+  }
+}
+/* =================================================================================
+Has Errors
+================================================================================= */
+.has-error .form-control {
+  border-color: red;
+  -webkit-box-shadow: 0 0 2px red;
+  -moz-box-shadow: 0 0 2px red;
+  box-shadow: 0 0 2px red;
+}
+
+/* =================================================================================
+IOT Notifier Plugin
+================================================================================= */
+.notifications {
+  bottom: 15px !important;
+  right: 20px !important;
+
+
+
+  .notification-wrapper {
+    margin-bottom: 10px !important;
+
+    -webkit-box-shadow: 0 0 15px #ddd;
+    -moz-box-shadow: 0 0 15px #ddd;
+    box-shadow: 0 0 15px #ddd;
+  }
+}
+
+.iot-notifier {
+
+  padding: 15px;
+
+  &.error {
+    background: red;
+    color: white;
+
+    .title-icon:before {
+      content: "\e92d";
+    }
+  }
+
+  &.warning {
+    background: orange;
+    color: white;
+
+    .title-icon:before {
+      content: "\e9ac";
+    }
+  }
+
+  &.success {
+    background: green;
+    color: white;
+
+    .title-icon:before {
+      content: "\e91f";
+    }
+  }
+
+  &.info {
+    background: blue;
+    color: white;
+
+    .title-icon:before {
+      content: "\e953";
+    }
+  }
+
+
+  .notification-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-bottom: 1px  #dedede solid;
+    display: block;
+  }
+
+  .notification-content {
+    font-size: 13px;
+  }
+}
+
+/* =================================================================================
+Shortcuts
+================================================================================= */
+@import "shortcuts.css";

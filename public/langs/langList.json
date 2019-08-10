@@ -1,0 +1,6 @@
+{
+  "tr": { "title": "Türkçe", "active": true},
+  "en": { "title": "English", "active": true},
+  "de": { "title": "Deutsch", "active": false},
+  "fr": { "title": "Français", "active": false}
+}

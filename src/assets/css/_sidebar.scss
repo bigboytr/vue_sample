@@ -1,0 +1,48 @@
+@import "mixins";
+
+/* =================================================================================
+Sidebar - menu
+================================================================================= */
+.sidebar {
+//  background-color: $layer1;
+  width: 180px;
+  position: fixed;
+  left: 0;
+  top: 50px;
+  z-index: 3;
+  height: 100%;
+  padding-top: 25px;
+
+  .nav  {
+    a {
+      //color: $text;
+      display: block;
+      border: none;
+      -webkit-transition: padding-left 0.5s;
+      -moz-transition: padding-left 0.5s;
+      -ms-transition: padding-left 0.5s;
+      -o-transition: padding-left 0.5s;
+      transition: padding-left 0.5s;
+
+      &:hover,
+      &:focus,
+      &:active {
+        //background: #424F58;
+        //color: $text;
+        padding-left: 25px;
+      }
+    }
+
+    li i {
+      @include margin(10px, "right");
+    }
+  }
+
+  .buildNo {
+    font-size: 10px;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,526 @@
+{
+  "appTitle": "Vue Sample",
+  "common": {
+    "logout": "Logout",
+    "label": {
+      "name": "Name",
+      "surname": "Surname",
+      "midname": "Mid. Name",
+      "email": "Email",
+      "username": "Username",
+      "password": "Password",
+      "language": "Language",
+      "success": "Success",
+      "error": "Error",
+      "warning": "Warning",
+      "oldPassword":"Old Password",
+      "newPassword":"New Password",
+      "newPasswordAgain":"New Password(Again)",
+      "filter":"Filter",
+      "userInfo":"User Info Definition",
+      "createUser":"Create System User",
+      "emptyList":"Empty List",
+      "searchResult":"No search results found",
+      "selectDefaultMessage": "--- Please Select ---",
+      "nextStep": "Next Step",
+      "prevStep": "Previous Step",
+      "finishStep": "Save"
+    },
+    "button": {
+      "save": "Save",
+      "create": "Create",
+      "cancel": "Cancel",
+      "login": "Login",
+      "deleteAll": "Delete All",
+      "deleteSelected": "Delete Selected",
+      "delete": "Delete",
+      "search": "Search",
+      "advancedSearch": "Advanced Search",
+      "update": "Update",
+      "upload": "Upload",
+      "connect": "Connect"
+    },
+    "statusCode": {
+      "200": "Process successful",
+      "400": "Bad request",
+      "401": "Unauthorized process",
+      "403": "Access forbidden",
+      "409": "Conflict email address",
+      "417": "Data not found",
+      "500": "Internal server error"
+    },
+    "errorCode":{
+      "3060": "Username or password incorrect",
+      "3140": "User not found",
+      "4330": "Read message from device failed",
+      "4360": "Error occured during device active status check",
+      "4400": "Error occured during getting message count"
+    },
+    "statusNotification": {
+      "fillForm":"Please fill in the form",
+      "resetPassword":"Password reset successfully",
+      "changePassword":"Password doesn't match",
+      "updatePlaceLocal":"Local Place updated successfully",
+      "updatePlaceGeographic":"Address updated successfully",
+      "updateIndividual":"Individual updated successfully",
+      "updateOrganization":"Organization updated successfully",
+      "updateProduct":"Product updated successfully",
+      "errorNetwork":"Network Error! Connection Refused",
+      "login":"Credential info must be filled",
+      "successIndividual":"Individual created successfully",
+      "successOrganization":"Organization created successfully",
+      "successProduct":"Product created successfully",
+      "successOffer":"Offer created successfully",
+      "successService":"Service created successfully",
+      "successResourceType":"Resource Type created successfully",
+      "successResource":"Resource created successfully",
+      "successRule":"Rule created successfully",
+      "successRequest":"Request created successfully",
+      "successPlaceLocal":"Local Place created successfully",
+      "successPlaceGeographic":"Address created successfully",
+      "deletePlaceLocal":"Local place deleted successfully",
+      "deletePlaceGeographic":"Address deleted successfully",
+      "deleteIndividual":"Individual deleted successfully",
+      "deleteIndividuals":"Individuals deleted successfully",
+      "deleteOffer":"Offer deleted successfully",
+      "deleteOrganization":"Organization deleted successfully",
+      "deleteProduct":"Product deleted successfully",
+      "deleteResource":"Resource deleted successfully",
+      "deleteResourceType":"Resource Type deleted successfully",
+      "deleteRule":"Rule deleted successfully",
+      "deleteService":"Service deleted successfully",
+      "warning":"Warning",
+      "success":"Success",
+      "info":"Info",
+      "error":"Error"
+    },
+    "swal":{
+      "title":"Warning",
+      "text":"Items will be deleted",
+      "icon":"Warning"
+    }
+  },
+  "login": {
+    "labelLogin": "Please enter your credential details to login.",
+    "labelCreateUser": "Please fill the form with following information.",
+    "labelResetPassword": "Enter your email address and we will send you a link to reset your password.",
+    "labelLoginError": "Bad login information !",
+    "button": {
+      "resetPassword": "Reset Password",
+      "registerUser": "New user sign up"
+    },
+    "placeholder": {
+      "company": "Company Name",
+      "confirmPassword": "Confirm Password",
+      "reasonRegister": "Reason of Registration Request",
+      "usernameOrEmail": "Username or Email"
+    }
+  },
+  "header": {
+    "profile": "Profile",
+    "changeLanguage": "Language"
+  },
+  "dashboard": {
+    "pageTitle": "Dashboard",
+    "labelInactive":"Inactive",
+    "labelActive":"Active",
+    "labelResourceList":"Resource List",
+    "description": "Administrator controls is here. Please select the action from the sidebar.",
+    "tableFields": ["Status","Name", "Type"],
+    "newForm": "Dashboard",
+    "tableChannels": ["", "ID" , "Resources", "Select"],
+    "button": {
+      "addResources": "Add Resources"
+    }
+  },
+  "individuals": {
+    "pageTitle": "Individuals",
+    "description": "",
+    "newForm": "New Individual",
+    "editForm": "Update Individual",
+    "formDescription": "Please make sure to fill the form with correct information.",
+    "geoPlaceInfo": "Create an individual to add geographic place",
+    "userDetailsInfo": "Create an individual to add user details",
+    "createUser": {
+      "0": "You only save individual details.",
+      "1": "You have to fill user information details."
+    },
+    "placeholder": {
+      "searchInput": "Individuals",
+      "prefix": "Name Prefix",
+      "nation": "Nationality",
+      "marital": "Marital Status",
+      "id": "ID Number",
+      "lang": "Preferred Language",
+      "gender": "Gender",
+      "birthPlace": "Place of Birth",
+      "birthDate": "Date of Birth",
+      "birthCountry": "Country of Birth",
+      "deathDate": "Date of Death",
+      "disability": "Disability",
+      "roleType":"Role Type",
+      "from":"From",
+      "to":"To",
+      "name":"Name",
+      "surname":"Surname",
+      "lockedUser":"Locked User",
+      "identification":"Identification Number",
+      "username":"Username",
+      "deActiveIndividuals":"Active Individuals"
+    },
+    "button": {
+      "new": "New Individual",
+      "create": "Create Individual",
+      "update": "Update Individual",
+      "createSystemUser": "Create System User",
+      "addLabel": "Add New Label with Language",
+      "addDisability": "Add Disability"
+    },
+    "tableFields": ["","ID", "Individual", "Place of Birth", "Birth Date", "Disability", "Email", "All", "Actions"],
+    "tabTitles": ["Individual Details", "Address Details", "User Details"],
+    "tableFieldsSearch": ["","ID", "Individual", "Role", "Email", "City", "Country", "isLocked", "Actions"],
+    "error": {
+      "name": "Name",
+      "surname": "Surname",
+      "roleType": "RoleType"
+    }
+  },
+  "products": {
+    "pageTitle": "Products",
+    "newForm": "New Product",
+    "editForm": "Update Product",
+    "placeholder": {
+      "searchInput": "Products",
+      "organization": "Organization",
+      "productName": "Product Name",
+      "productDescription": "Product Description",
+      "productStatus": "Product Status",
+      "validDate": "Valid For Date",
+      "productCapacity": "Product Capacity",
+      "productType": "Product Type"
+    },
+    "button": {
+      "new": "New Product"
+    },
+    "tableFields": ["", "Product Name", "Description", "Status", "Capacity", "Type", "Select", "Actions"]
+  },
+  "offers": {
+    "pageTitle": "Offers",
+    "newForm": "New Offer",
+    "editForm": "Update Offer",
+    "newFormParty": "New Party",
+    "editFormParty": "Update Offer Party",
+    "placeholder": {
+      "organization": "Organization",
+      "product": "Product",
+      "offerName": "Offer Name",
+      "offerDescription": "Offer Description",
+      "validDate": "Valid Until"
+    },
+    "button": {
+      "new": "New Offer"
+    },
+    "tableFields": ["", "Organization", "Product", "Offer", "Offer Description", "Accepted", "Select", "Actions"]
+  },
+  "userProfiles": {
+    "userDetails": {
+      "locked": "Locked ?",
+      "lockedDesc": {
+        "0": "User can login",
+        "1": "The user is locked. No login allowed"
+      },
+      "forceEmail": "Force email activation",
+      "forceEmailDesc": {
+        "0": "There isn't any activation process",
+        "1": "User must click the activation link via email."
+      },
+      "forceDetails": "Force complete individual details",
+      "forceDetailsDesc": {
+        "0": "User details are not important",
+        "1": "User must complete his details from profile page."
+      },
+      "involvements": "Select Involvements"
+    },
+    "tabTitles": ["User Details", "Address Details"],
+    "button":{
+      "unSubsFromIotManager":"Unsubscribe From IoT Manager",
+      "changePassword": "Change Password",
+      "next":"Next/Address"
+    }
+  },
+  "settings" : {
+    "pageTitle": "Settings",
+    "placeholder": {
+      "lookupLabel": "Name",
+      "code": "Code",
+      "tableName": "Table Name",
+      "language": "Language"
+    },
+    "button" : {
+      "addLabel": "Add New Label with Language",
+      "addNewLookupRow": "Add New Lookup Row",
+      "create": "Create Lookup Label"
+    },
+    "form":"Add New Disability",
+    "modalTitle":"New Lookup Label",
+    "childModalTitle":"Edit Lookup Label"
+  },
+  "organization": {
+    "pageTitle": "Organizations",
+    "description": "",
+    "form": "New Organization",
+    "formDescription": "Please make sure to fill the form with correct information.",
+    "localPlaceInfo": "Create an organization to add local place",
+    "geoPlaceInfo": "Create an organization to add geographic place",
+    "placeholder": {
+      "searchInput": "Organizations",
+      "organizationName1": "Name",
+      "organizationName2": "Name 2",
+      "idtax": "Identification/Tax Number",
+      "startDate": "Organization activity start date",
+      "legal": "Is legal entity ?",
+      "language": "Default language",
+      "from":"From",
+      "to":"To",
+      "deactivated":"Active Organizations",
+      "identification":"Identification Number",
+      "organizationRole":"Organization Role",
+      "city":"City",
+      "country":"Country"
+    },
+    "button": {
+      "new": "New Organization"
+    },
+    "tableFields": ["", "Identification Number", "Organization Name", "Language", "Activity Start",  "All", "Actions"],
+    "tabTitles": ["Organization Details", "Local Place", "Address Details"]
+  },
+  "placeLocal": {
+    "title": "Local Place",
+    "placeholder": {
+      "compound": "Compound",
+      "type": "Type",
+      "definition": "Definition"
+    },
+    "savedItem": "Saved Address"
+  },
+  "placeGeographic": {
+    "title": "Address Info",
+    "placeholder": {
+      "addressLine1": "Address Line 1",
+      "addressLine2": "Address Line 2",
+      "city": "City",
+      "town": "Town",
+      "zipCode": "Zip Code",
+      "stateProvince": "State/Province",
+      "country": "Country",
+      "siteName": "Site Name",
+      "siteCode": "Site Code",
+      "siteType": "Site Type",
+      "timeZone": "Time Zone",
+      "defaultAdress":"Default Adres"
+    },
+    "required": "required",
+    "savedItem": "Saved Address"
+  },
+  "service": {
+    "title": "Service Info",
+    "name": "Service Name",
+    "serviceDto": {
+      "serviceName": "Service Name",
+      "serviceDescription": "Service Description",
+      "serviceActive": "Service Active",
+      "serviceCap": "Service Capacity",
+      "isStatefulService": "Is Stateful Service",
+      "serviceConfiguration": "Service Configuration",
+      "serviceConfigurationSpec": "Service Configuration Specification"
+    },
+    "button": {
+      "new": "New Service",
+      "retrieveSwitchButton": "Retrieve Invalid Service as well",
+      "allocateProductService": "Allocate Product-Service"
+    },
+    "tableItems":{
+      "organization":"Organization",
+      "product":"Product",
+      "service":"Service",
+      "numberOfThingsConnected":"Number of Things Connected",
+      "transactions":"Transactions"
+    }
+  },
+  "biRequests": {
+    "pageTitle": "Business Interaction / Service Requests",
+    "tableFields": ["Request Date", "Requested By", "Description", "Email", "Type", "Status", "Locked", ""],
+    "placeholder": {
+      "from": "From",
+      "to": "To",
+      "type": "BI/SR Type",
+      "status": "Status"
+    },
+    "detailModal": {
+      "title": "Detail",
+      "requestDate": "Request Date",
+      "description": "Description",
+      "status": "Status",
+      "type": "Type",
+      "locked": "Locked",
+      "placeholder": {
+        "forceEmail": "Force email activation",
+        "forceDetails": "Force complete individual details",
+        "assignRoles": "Assign Roles",
+        "involvementTypes": "Involvement Types",
+        "multipleSelect": "Hold CTRL to multiple select"
+      },
+      "button": {
+        "activate": "Toggle User Activation",
+        "ignore": "Ignore / Delete Interaction"
+      }
+    }
+  },
+  "services": {
+    "pageTitle": "Services"
+  },
+  "resources": {
+    "pageTitle": "Resources",
+    "newForm": "New Resource",
+    "editForm": "Update Resource",
+    "selectType": "Select Resource Type",
+    "formInfo": "Please replace the '##' values with actual values.",
+    "button": {
+      "new": "New Resource",
+      "getConfig": "Generate Form",
+      "party": "Relate a Party",
+      "place": "Relate a Place"
+    },
+    "placeholder": {
+      "organization":"Organization",
+      "product":"Product",
+      "service": "Service",
+      "status": "Status",
+      "name": "Resource Name",
+      "description": "Resource Description",
+      "resourceType": "Resource Type",
+      "resource":"Resource Name"
+    },
+    "label": {
+      "resource":"Resource Name"
+    },
+    "tableFields": ["", "Resource Name", "Actions"]
+  },
+  "resourceTypes": {
+    "pageTitle": "Resource Types",
+    "newForm": "New Resource Type",
+    "editForm": "Update Resource Type",
+    "button": {
+      "new": "New Resource Type",
+      "backResource": "Back Resource Page"
+    },
+    "warning": "Please select product and upload data model file first !",
+    "warningName": "Please give a name for this Resource Types!",
+    "tableFields": ["", "Product", "Resource Type Name", "Description", "Actions"],
+    "chooseFile":"Choose File",
+    "action": "Action",
+    "placeholder": {
+      "name": "Resource Type Name",
+      "description": "Resource Type Description",
+      "coreResourceType": "Core Resource Type",
+      "dataModel": "Data Model",
+      "createConfig": "Create Configuration",
+      "createCall": "Create IoT Call",
+      "readConfig": "Read Configuration",
+      "readCall": "Read IoT Call",
+      "writeConfig": "Write Configuration",
+      "writeCall": "Write IoT Call",
+      "writeAttrConfig": "Write Attributes Configuration",
+      "writeAttrCall": "Write Attributes IoT Call",
+      "observeConfig": "Observe Configuration",
+      "observeCall": "Observe IoT Call",
+      "deleteConfig": "Delete Configuration",
+      "deleteCall": "Delete IoT Call",
+      "executeConfig": "Execute Configuration",
+      "executeCall": "Execute IoT Call",
+      "discoverConfig": "Discover Configuration",
+      "discoverCall": "Discover IoT Call"
+    }
+  },
+  "rules": {
+    "pageTitle": "Rule Engine",
+    "placeholder": {
+      "organization":"Organization",
+      "product":"Product",
+      "service":"Service"
+    },
+    "conditionForm": {
+      "label": "Add condition to : ",
+      "addCondition": "Add Condition",
+      "infoText": "Please first, select thing value to add condition.",
+      "cond": {
+        "0": "Last Value", "1": "Average", "2": "Std Dev", "3": "Max", "4": "Min", "5": "Trend", "6": "Count Distinct"
+      },
+      "inTime": {
+        "0": "Miliseconds", "1": "Seconds", "2": "Minutes", "3": "Hours", "4": "Days"
+      },
+      "operand": {
+        "0": ">", "1": "<", "2": "="
+      }
+    },
+    "actionForm": {
+      "label": "Add action to : ",
+      "addAction": "Add Action",
+      "infoText": "Please use write / execute buttons to add action",
+      "valueText": "Value : "
+    },
+    "button":{
+      "new":"New Rule",
+      "openDashboard":"Open Rules Dashboard",
+      "addCondition": "Add Condition",
+      "addAction": "Add Action",
+      "actuator": "Actuators"
+    },
+    "tableFields": ["Name", "Definition", "Enable", "Actions"]
+  },
+  "offerBindings": {
+    "pageTitle": "Offer Party",
+    "newForm": "New Party",
+    "form": "New Party",
+    "tabTitles": ["Individuals", "Offer Party Segment"],
+    "tableFieldsForm": ["", "Name Surname", "City", "Town", "Country","Connect"],
+    "tableFieldsSegment": ["", "Name/Surname", "City", "Town", "Country", "Offer Response", "Transactions"],
+    "placeholder": {
+      "organization": "Organization",
+      "product": "Product",
+      "offer": "Offer"
+    },
+    "button":{
+      "new":"Include Party",
+      "changeResponse":"Change Response",
+      "bind":"Bind to Service/Resource"
+    }
+  },
+  "actuators": {
+    "pageTitle": "Actuators",
+    "newForm": "Yeni Çalıştırıcı",
+    "placeholder": {
+      "title": "Title",
+      "organization": "Organization",
+      "product": "Product"
+    },
+    "tableFields": ["#", "Title", "Actions"],
+    "button":{
+      "new":"Yeni Çalıştırıcı"
+    }
+  },
+  "sidebar":{
+    "dashboard": "Dashboard",
+    "individuals": "Individuals",
+    "organizations": "Organizations",
+    "products" : "Products",
+    "offers": "Offers",
+    "services": "Services",
+    "resourceTypes": "Resource Types",
+    "resources": "Resources",
+    "ruleEngine": "Rule Engine",
+    "settings": "Settings",
+    "requests": "Requests"
+  }
+
+}
